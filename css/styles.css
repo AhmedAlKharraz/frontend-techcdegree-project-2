@@ -4,7 +4,6 @@
 
 * {
     box-sizing: border-box;
-    border: red solid 1px;
 }
 
 body {
@@ -12,6 +11,7 @@ body {
     color: #565656;
     background-color: #FAFAFA;
     line-height: 1.8em;
+    margin: 0;
 }
 
 
@@ -29,6 +29,11 @@ p {
     margin-bottom: 1.8em;
 }
 
+.about-me p {
+    margin-top: 0;
+}
+
+
 img {
     max-width: 100%;
 }
@@ -38,6 +43,9 @@ img {
     padding-right: 1em;
 }
 
+h1 {
+    margin-top: 0.5em;
+}
 
 /* ================================= 
   Base Layout Styles
@@ -69,10 +77,9 @@ img {
 }
 
 .portfolio-section {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+
+    margin: 0 auto;
+    padding: 1em 2em;
     background-color: white;
     text-align: center;
 
@@ -80,11 +87,17 @@ img {
 
 .portfolio-section .name {
     margin-bottom: 2em;
+    text-transform: uppercase;
 }
 
 .card {
+    display: block;
+    max-width: 100%;
     margin-top: 2em;
     margin-bottom: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
 }
 
 /* ---- Contact ---------- */
@@ -135,10 +148,6 @@ img {
 
 @media (min-width: 768px) {
 
-    body {
-        background-color: khaki;
-    }
-
     .main-nav a {
         display: inline-block;
         background-color: inherit;
@@ -150,9 +159,9 @@ img {
         display: inline-block;
     }
 
-    .about-me .profile-img {
+    .profile-img {
         float: right;
-        margin-left: 50px;
+        margin-left: 30px;
         margin-bottom: 80px;
     }
 
@@ -173,10 +182,9 @@ img {
     }
 
     .card {
-        display: inline-block;
-        width: 350px;
-        margin-left: 5px;
-        margin-right: 5px;
+        float: left;
+        width: calc(50% - 20px);
+        height: 450px;
     }
 
     .footer .footer-backtop {
@@ -201,8 +209,34 @@ img {
 }
 
 @media (min-width: 1024px) {
-    body {
-        background-color: rosybrown;
+
+    .container .name,
+    .main-nav {
+        display: inline-block;
+    }
+
+    .container .name {
+        float: left;
+    }
+
+    .main-nav {
+        float: right;
+        margin-top: .6em;
+    }
+
+    .main-nav a {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .portfolio-section {
+        margin: auto 1em;
+    }
+
+    .card {
+        width: calc(33.333% - 40px);
+        margin: 0 20px;
+
     }
 }
 
